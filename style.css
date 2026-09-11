@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #171717;
+  background: #f7f5f0;
+  line-height: 1.7;
+}
+
+a { color: inherit; }
+
+.hero {
+  min-height: 100vh;
+  background: #111;
+  color: #fff;
+  padding: 28px 7%;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span { color: #d9b56d; }
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.nav-links a:hover { color: #d9b56d; }
+
+.hero-content {
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #a88347;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: .98;
+  letter-spacing: -4px;
+  margin-bottom: 28px;
+}
+
+.lead {
+  max-width: 600px;
+  color: #cfcfcf;
+  font-size: 18px;
+  margin-bottom: 34px;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 23px;
+  background: #d9b56d;
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.photo-wrap {
+  width: min(380px, 100%);
+  justify-self: end;
+}
+
+.photo-wrap img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  filter: saturate(.9);
+}
+
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 95px 7%;
+}
+
+.alt { max-width: none; background: #ebe7df; }
+.alt > * { max-width: 1200px; margin-left: auto; margin-right: auto; }
+
+.section-title { margin-bottom: 45px; }
+
+.section h2 {
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1.5fr .7fr;
+  gap: 70px;
+}
+
+.profile-grid p { margin-bottom: 18px; }
+
+.info-card {
+  border-top: 2px solid #171717;
+  padding-top: 20px;
+}
+
+.info-card h3 { margin-bottom: 14px; }
+
+ul { padding-left: 20px; }
+li { margin: 7px 0; }
+
+.timeline {
+  display: grid;
+  gap: 35px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 35px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #c9c3b8;
+}
+
+.year {
+  font-weight: 700;
+  color: #a88347;
+}
+
+.timeline-item h3 { font-size: 25px; }
+.timeline-item h4 { font-size: 17px; margin: 3px 0; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.project-card {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #ded9cf;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  font-size: 22px;
+  line-height: 1.25;
+  margin: 12px 0 8px;
+}
+
+.tag {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #a88347;
+}
+
+.muted {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills span {
+  padding: 12px 18px;
+  border: 1px solid #bdb5a7;
+  border-radius: 100px;
+  background: #fff;
+}
+
+.contact { padding-bottom: 110px; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.contact-grid > div {
+  padding: 25px 0;
+  border-top: 1px solid #aaa;
+}
+
+.contact-grid p { margin-top: 5px; }
+.contact-grid a { text-decoration: none; }
+
+footer {
+  padding: 25px 7%;
+  text-align: center;
+  background: #111;
+  color: #aaa;
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  .nav-links { display: none; }
+
+  .hero-content,
+  .profile-grid,
+  .cards,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content { margin-top: 70px; gap: 45px; }
+  .photo-wrap { justify-self: start; width: min(330px, 100%); }
+  .hero h1 { letter-spacing: -2px; }
+  .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+  .section { padding-top: 70px; padding-bottom: 70px; }
+}
